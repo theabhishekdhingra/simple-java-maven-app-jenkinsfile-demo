@@ -2,6 +2,6 @@ FROM openjdk:17
 
 EXPOSE 8080
 
-ADD target/myApp-1.0-SNAPSHOT.jar myApp-1.0-SNAPSHOT.jar
+ADD target/my-app-1.0-SNAPSHOT.jar my-app-1.0-SNAPSHOT.jar
 
-ENTRYPOINT ["java", "-jar","myApp-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar","my-app-1.0-SNAPSHOT.jar"]
