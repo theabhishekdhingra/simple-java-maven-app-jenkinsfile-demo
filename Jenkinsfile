@@ -8,12 +8,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '/srv/apache-maven-3.8.6/bin/mvn package'
+                sh '/usr/share/maven/bin/mvn package'
             }
         }
         stage('Test') {
             steps {
-                sh '/srv/apache-maven-3.8.6/bin/mvn test'
+                sh '/usr/share/maven/bin/mvn test'
             }
         }
         stage('Build and Push Docker Image') {
