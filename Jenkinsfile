@@ -16,6 +16,11 @@ pipeline {
                 sh '/usr/share/maven/bin/mvn test'
             }
         }
+        stage('snyk_scan'){
+          steps  {
+            snykSecurity projectName: 'maven-snyk', severity: 'critical', snykInstallation: 'Please define a Snyk installation in the Jenkins Global Tool Configuration. This task will not run without a Snyk installation.', snykTokenId: 'snyk'
+            }
+        }
         stage('Build and Push Docker Image') {
             steps {
               withCredentials([usernamePassword(credentialsId: 'b43e86d5-83a0-483c-b4d8-ef0c6daa20c4', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
