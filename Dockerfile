@@ -1,4 +1,4 @@
-FROM openjdk:17
+FROM openjdk:23-ea-18-jdk-oraclelinux8
 
 EXPOSE 8080
 
