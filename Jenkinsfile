@@ -18,12 +18,12 @@ pipeline {
         }
         stage('Build and Push Docker Image') {
             steps {
-              withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+              withCredentials([usernamePassword(credentialsId: 'b43e86d5-83a0-483c-b4d8-ef0c6daa20c4', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 
                 sh '''
-                docker build -t christianheimke/jenkins-ts:${VERSION}  .
+                docker build -t abhidhingra/jenkins-ts:${VERSION}  .
                 docker login -u $USERNAME -p $PASSWORD
-                docker push christianheimke/jenkins-ts:${VERSION}
+                docker push abhidhingra/jenkins-ts:${VERSION}
                 '''
               }
             }
