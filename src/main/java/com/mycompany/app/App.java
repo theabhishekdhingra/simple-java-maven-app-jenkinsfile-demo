@@ -12,7 +12,7 @@ public class App
 
     public static void main(String[] args) {
         System.out.println(new App().getMessage());
-        password = "abcdef";
+        private final String password = "abcdef";
     }
 
     private final String getMessage() {
