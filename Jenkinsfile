@@ -18,7 +18,7 @@ pipeline {
         }
         stage('snyk_scan'){
           steps  {
-            snykSecurity projectName: 'maven-snyk', severity: 'critical', snykInstallation: 'snyk', snykTokenId: 'snyk', targetFile: 'pom.xml'
+            snykSecurity severity: 'critical', snykInstallation: 'snyk', snykTokenId: 'snyk', targetFile: 'pom.xml'
             }
         }
         stage('Build and Push Docker Image') {
