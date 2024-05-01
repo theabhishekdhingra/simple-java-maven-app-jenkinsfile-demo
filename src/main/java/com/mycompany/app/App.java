@@ -12,7 +12,6 @@ public class App
 
     public static void main(String[] args) {
         System.out.println(new App().getMessage());
-        String password = "abcdef";
     }
 
     private final String getMessage() {
