@@ -39,12 +39,12 @@ pipeline {
             }
         }
 
-        }
 
         stage('Release') {
             steps {
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
         }
+    }
     
 }
