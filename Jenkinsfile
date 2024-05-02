@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'jenkinsnode'
+        label 'kubepods'
     }
     environment {
         VERSION = '1.0'
