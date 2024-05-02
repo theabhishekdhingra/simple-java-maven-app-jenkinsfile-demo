@@ -30,6 +30,7 @@ pipeline {
                 docker login -u $USERNAME -p $PASSWORD
                 docker push abhidhingra/jenkins-ts:${VERSION}
                 '''
+              }
             }
         }
         stage('Deploy an application') {
