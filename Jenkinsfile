@@ -32,6 +32,13 @@ pipeline {
                 '''
               }
             }
+        stage('Deploy an application') {
+            steps {
+                script  {
+                    kubernetesDeploy(configs: "manifest.yaml")
+                }
+            }
+        }
 
         }
 
