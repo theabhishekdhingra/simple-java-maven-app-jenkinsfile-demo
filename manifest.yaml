@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: sample-mvn-app
-        image: abhidhingra/jenkins-ts
+        image: abhidhingra/jenkins-ts:1.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
