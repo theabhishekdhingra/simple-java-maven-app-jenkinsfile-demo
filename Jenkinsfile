@@ -33,9 +33,13 @@ pipeline {
               }
             }
         }
-        stage('Deploy an application') {
+        stage("deployment"){
             steps {
-                kubernetesDeploy(configs: "manifest.yaml")
+
+                sh '''ls -lrt
+                kubectl --kubeconfig=/root/.kube/config get pods
+                kubectl --kubeconfig=/root/.kube/config apply -f manifest.yaml
+                '''
             }
         }
 
