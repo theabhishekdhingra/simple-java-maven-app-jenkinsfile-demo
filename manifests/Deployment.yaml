@@ -22,5 +22,7 @@ spec:
         - image: 'abhidhingra/jenkins-ts:latest'
           imagePullPolicy: IfNotPresent
           name: sample-mvn-app
+          command: [ "sleep" ]
+          args: [ "infinity" ]
           ports:
             - containerPort: 80
