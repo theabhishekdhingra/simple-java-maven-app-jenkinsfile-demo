@@ -19,7 +19,7 @@ spec:
         app: mvn-app
     spec:
       containers:
-        - image: 'abhidhingra/jenkins-ts:1.0'
+        - image: 'abhidhingra/jenkins-ts:latest'
           imagePullPolicy: IfNotPresent
           name: sample-mvn-app
           ports:
